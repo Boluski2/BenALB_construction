@@ -82,7 +82,7 @@ function HeroSectionComponent() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="inline-block text-xs font-medium tracking-widest uppercase text-accent">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-accent px-3 py-1 rounded-full mb-2">
                 {slides[current].label}
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading text-primary-foreground leading-[1.1]">
