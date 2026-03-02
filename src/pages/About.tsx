@@ -322,9 +322,9 @@ const About = () => {
             >
               {[
                 { name: "Benjamin Alabi", role: "MD / CEO", image: teamCeo },
-                { name: "Adaeze Okonkwo", role: "Head of Engineering", image: teamCto },
-                { name: "Chukwuemeka Nwosu", role: "Project Manager", image: teamPm },
-                { name: "Funmilayo Adeyemi", role: "Head of Geospatial", image: teamGeo },
+                // { name: "Adaeze Okonkwo", role: "Head of Engineering", image: teamCto },
+                // { name: "Chukwuemeka Nwosu", role: "Project Manager", image: teamPm },
+                // { name: "Funmilayo Adeyemi", role: "Head of Geospatial", image: teamGeo },
               ].map((member) => (
                 <motion.div key={member.name} className="group" variants={fadeInUp}>
                   <div className="aspect-[3/4] overflow-hidden mb-4">

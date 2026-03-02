@@ -74,7 +74,7 @@ function ProjectsSectionComponent() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="text-[10px] font-medium tracking-widest uppercase text-accent">
+                <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary bg-accent px-3 py-1 rounded-full mb-2">
                   {project.category}
                 </span>
                 <h3 className="text-base font-heading text-primary-foreground mt-1">{project.title}</h3>
