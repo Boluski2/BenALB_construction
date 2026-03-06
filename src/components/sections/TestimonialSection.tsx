@@ -6,19 +6,19 @@ import { fadeInUp, viewportSettings } from "@/lib/animations";
 const testimonials = [
   {
     quote: "We are proud that an indigenous construction company, BenALB delivered the project on time and to specification.",
-    author: "Engr. Tunde Akintaro, MNSE",
+    author: "satisfied client.",
     role: "Managing Partner, Bezal Engineering Limited",
     project: "Dominion Air Hangar Project",
   },
   {
     quote: "BenALB delivered our commercial complex on time and within budget. Their professionalism and attention to detail exceeded our expectations.",
-    author: "Chief Mrs. Olayinka Adams",
+    author: "satisfied client.",
     role: "CEO, Adams Properties Ltd",
     project: "Victoria Island Commercial Complex",
   },
   {
     quote: "Working with BenALB on our infrastructure project was a seamless experience. Their engineering expertise and project management skills are truly world-class.",
-    author: "Alh. Ibrahim Suleiman",
+    author: "satisfied client.",
     role: "Project Manager, Federal Ministry of Works",
     project: "Lagos-Ibadan Expressway Section",
   },
@@ -59,7 +59,7 @@ function TestimonialSectionComponent() {
               <div>
                 <p className="text-sm font-medium text-foreground">{testimonials[current].author}</p>
                 <p className="text-xs text-muted-foreground mt-0.5">{testimonials[current].role}</p>
-                <p className="text-xs text-accent mt-0.5">{testimonials[current].project}</p>
+                <p className="text-lg text-accent mt-0.5">{testimonials[current].project}</p>
               </div>
             </motion.div>
           </AnimatePresence>
