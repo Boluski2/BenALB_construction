@@ -5,7 +5,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, viewportSettings } from "@/lib/animations";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroConstruction from "@/assets/hero-construction.jpg";
 import projectCommercial from "@/assets/project-commercial.jpg";
@@ -284,66 +284,59 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Preview */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <motion.div
-              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportSettings}
-              variants={staggerContainer}
-            >
-              <div className="space-y-3">
-                <motion.span className="text-xs font-medium tracking-widest uppercase text-accent block" variants={fadeInUp}>
-                  Leadership
-                </motion.span>
-                <motion.h2 className="text-2xl md:text-3xl font-heading text-foreground" variants={fadeInUp}>
-                  Meet Our Team
-                </motion.h2>
-              </div>
-              <motion.div variants={fadeInUp}>
-                <Link
-                  to="/team"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors group"
-                >
-                  View full team
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6"
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportSettings}
-              variants={staggerContainer}
-            >
-              {[
-                { name: "Benjamin Alabi", role: "MD / CEO", image: teamCeo },
-                // { name: "Adaeze Okonkwo", role: "Head of Engineering", image: teamCto },
-                // { name: "Chukwuemeka Nwosu", role: "Project Manager", image: teamPm },
-                // { name: "Funmilayo Adeyemi", role: "Head of Geospatial", image: teamGeo },
-              ].map((member) => (
-                <motion.div key={member.name} className="group" variants={fadeInUp}>
-                  <div className="aspect-[3/4] overflow-hidden mb-4">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 className="text-base font-heading text-foreground">{member.name}</h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
+       {/* Team Preview */}
+          <section className="py-20">
+            <div className="container mx-auto px-6">
+              <motion.div
+                className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportSettings}
+                variants={staggerContainer}
+              >
+                <div className="space-y-3">
+                  <motion.span className="text-xs font-medium tracking-widest uppercase text-accent block" variants={fadeInUp}>
+                    Leadership
+                  </motion.span>
+                  <motion.h2 className="text-2xl md:text-3xl font-heading text-foreground" variants={fadeInUp}>
+                    Meet Our Team
+                  </motion.h2>
+                </div>
+                <motion.div variants={fadeInUp}>
+                  <Link
+                    to="/team"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors group"
+                  >
+                    View full team
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+              </motion.div>
 
+              <motion.div
+                className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportSettings}
+                variants={staggerContainer}
+              >
+                {[
+                  { name: "Engr. Albert Aro", role: "MD / CEO" },
+                  // { name: "Adaeze Okonkwo", role: "Head of Engineering" },
+                  // { name: "Chukwuemeka Nwosu", role: "Project Manager" },
+                  // { name: "Funmilayo Adeyemi", role: "Head of Geospatial" },
+                ].map((member) => (
+                  <motion.div key={member.name} className="group" variants={fadeInUp}>
+                    <div className="aspect-[3/4] overflow-hidden mb-4 bg-secondary flex items-center justify-center">
+                      <User className="w-16 h-16 text-muted-foreground/40" />
+                    </div>
+                    <h3 className="text-base font-heading text-foreground">{member.name}</h3>
+                    <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
         <CTASection />
         <Footer />
       </div>

@@ -5,38 +5,38 @@ import { PageTransition } from "@/components/PageTransition";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, viewportSettings } from "@/lib/animations";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, User } from "lucide-react"; // Added User icon
 import teamMeeting from "@/assets/team-meeting.jpg";
-import teamCeo from "@/assets/team-ceo.jpg";
-import teamCto from "@/assets/team-cto.jpg";
-import teamPm from "@/assets/team-pm.jpg";
-import teamGeo from "@/assets/team-geo.jpg";
+// import teamCeo from "@/assets/team-ceo.jpg"; // Removed image import
+// import teamCto from "@/assets/team-cto.jpg";
+// import teamPm from "@/assets/team-pm.jpg";
+// import teamGeo from "@/assets/team-geo.jpg";
 
 const teamMembers = [
   {
-    name: "Benjamin Alabi",
+    name: "Engr. Albert Aro",
     role: "Managing Director / CEO",
     bio: "With over 20 years of experience in engineering and construction, Benjamin leads BenALB's strategic vision and operational excellence across all service verticals.",
-    image: teamCeo,
+    // image: teamCeo, // Removed image reference
   },
-  {
-    name: "Adaeze Okonkwo",
-    role: "Head of Engineering",
-    bio: "A seasoned civil engineer overseeing all construction and EPC projects, ensuring quality delivery and compliance with international standards.",
-    image: teamCto,
-  },
-  {
-    name: "Chukwuemeka Nwosu",
-    role: "Project Manager",
-    bio: "Coordinates multi-disciplinary project teams, managing timelines, budgets, and stakeholder relationships to deliver projects on schedule.",
-    image: teamPm,
-  },
-  {
-    name: "Funmilayo Adeyemi",
-    role: "Head of Geospatial Services",
-    bio: "Leads the geospatial division, providing advanced GIS mapping, land surveying, and spatial analysis solutions for infrastructure development.",
-    image: teamGeo,
-  },
+  // {
+  //   name: "Adaeze Okonkwo",
+  //   role: "Head of Engineering",
+  //   bio: "A seasoned civil engineer overseeing all construction and EPC projects, ensuring quality delivery and compliance with international standards.",
+  //   image: teamCto,
+  // },
+  // {
+  //   name: "Chukwuemeka Nwosu",
+  //   role: "Project Manager",
+  //   bio: "Coordinates multi-disciplinary project teams, managing timelines, budgets, and stakeholder relationships to deliver projects on schedule.",
+  //   image: teamPm,
+  // },
+  // {
+  //   name: "Funmilayo Adeyemi",
+  //   role: "Head of Geospatial Services",
+  //   bio: "Leads the geospatial division, providing advanced GIS mapping, land surveying, and spatial analysis solutions for infrastructure development.",
+  //   image: teamGeo,
+  // },
 ];
 
 const Team = () => {
@@ -50,6 +50,7 @@ const Team = () => {
     ogUrl: "https://benalb.com/team",
     canonicalUrl: "https://benalb.com/team",
   });
+  
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
@@ -94,14 +95,9 @@ const Team = () => {
                   className="group"
                   variants={fadeInUp}
                 >
-                  <div className="aspect-[3/4] overflow-hidden mb-5">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                  <div className="aspect-[3/4] overflow-hidden mb-5 bg-secondary flex items-center justify-center">
+                    {/* Replaced image with User icon */}
+                    <User className="w-24 h-24 text-muted-foreground/40" />
                   </div>
                   <h3 className="text-lg font-heading text-foreground">{member.name}</h3>
                   <p className="text-xs font-medium tracking-widest uppercase text-accent mt-1">{member.role}</p>

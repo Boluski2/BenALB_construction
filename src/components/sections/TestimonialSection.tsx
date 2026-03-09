@@ -8,19 +8,19 @@ const testimonials = [
     quote: "We are proud that an indigenous construction company, BenALB delivered the project on time and to specification.",
     author: "satisfied client.",
     role: "Managing Partner, Bezal Engineering Limited",
-    project: "Dominion Air Hangar Project",
+    project: "Lagos, Nigeria",
   },
   {
     quote: "BenALB delivered our commercial complex on time and within budget. Their professionalism and attention to detail exceeded our expectations.",
     author: "satisfied client.",
     role: "CEO, Adams Properties Ltd",
-    project: "Victoria Island Commercial Complex",
+    project: "Lagos, Nigeria ",
   },
   {
     quote: "Working with BenALB on our infrastructure project was a seamless experience. Their engineering expertise and project management skills are truly world-class.",
     author: "satisfied client.",
     role: "Project Manager, Federal Ministry of Works",
-    project: "Lagos-Ibadan Expressway Section",
+    project: "Lagos-Ibadan, Nigeria",
   },
 ];
 
